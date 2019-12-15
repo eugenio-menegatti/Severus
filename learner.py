@@ -234,7 +234,7 @@ class Learner:
         '''
         Model:
 
-        Input: 12 vars as follow
+        Input: 13 vars as follow
         fruitYUp        bool, true if the fruit is in the same col as the snake's head, upper direction
         fruitYDown      bool, true if the fruit is in the same col as the snake's head, lower direction
         fruitXRight     bool, true if the fruit is in the same row as the snake's head, right direction
@@ -243,12 +243,13 @@ class Learner:
         fruitQ2         bool, true if the fruit is in quadrant 2 relative to the snake's head
         fruitQ3         bool, true if the fruit is in quadrant 3 relative to the snake's head
         fruitQ4         bool, true if the fruit is in quadrant 4 relative to the snake's head
-        checkerUp       int holding the value of the checker on the top of the snake's head
-        checkerDown     int holding the value of the checker on the bottom of the snake's head
-        checkerRight    int holding the value of the checker on the right of the snake's head
-        checkerLeft     int holding the value of the checker on the left of the snake's head
-
-        Output: 3 vars holding the predicted direction (class) up, down, right, left
+        upD		       	float holding the distance of a non empy checker from the snake's head in the up direction
+        downD   		float holding the distance of a non empy checker from the snake's head in the down direction
+        rightD    		float holding the distance of a non empy checker from the snake's head in the right direction
+        leftD     		float holding the distance of a non empy checker from the snake's head in the left direction
+		fruitD			float holding the distance of a the fruit from the snake's head
+        
+		Output: 3 vars holding the predicted direction (class) up, down, right, left
         goStraight:     bool, true is the prediction is to go straight
         turnRight:      bool, true is the prediction is to turn right
         turnLeft:       bool, true is the prediction is to turn left
